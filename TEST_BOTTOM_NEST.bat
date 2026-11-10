@@ -1,0 +1,13 @@
+@echo off
+cd /d "%~dp0"
+set SPIDER_START_X_FRAC=0.10
+set SPIDER_START_Y_FRAC=0.89
+set SPIDER_RETREAT_IDLE_SEC=5
+set SPIDER_DEN_REST_MIN_SEC=28
+set SPIDER_DEN_REST_MAX_SEC=32
+set SPIDER_NEST_GROW_DELAY_SEC=2
+set SPIDER_NEST_GROW_SECONDS=8
+set SPIDER_HANG_WEB_RATIO=0.65
+py -3 -m pip install Pillow
+py -3 spiderpet.pyw
+if errorlevel 1 pause

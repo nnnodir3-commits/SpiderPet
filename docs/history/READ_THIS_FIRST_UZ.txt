@@ -1,0 +1,17 @@
+SpiderPet v28 - EXE build + troubleshooting (Windows 10/11)
+
+1) BUILD_ONE_EXE.bat  - creates dist\SpiderPet.exe.
+2) TEST_EXE.bat       - runs the EXE and keeps a diagnostic window open.
+3) OPEN_ERROR_LOG.bat - opens %LOCALAPPDATA%\SpiderPet\spiderpet_error.log.
+4) BUILD_DEBUG_EXE.bat - optional DEBUG console EXE if normal EXE closes immediately.
+
+Important: The Python scripts require Python 3.10+ to BUILD, but the final
+SpiderPet.exe does not require Python installed on a target Windows PC.
+Python + network required for the FIRST build only.
+
+If the EXE flashes briefly and exits, start TEST_EXE.bat instead of the EXE.
+Photograph the last lines or send the error log. These files help locate the
+actual failure; a Python runtime exception will also show a Windows error popup.
+
+The application, sprites, combat, triangular nest and cursor behavior are
+identical to SpiderPet v28. Only the diagnostics / build scripts were improved.

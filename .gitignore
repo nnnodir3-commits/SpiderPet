@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+# PyInstaller / build artifacts
+build/
+dist/
+*.spec
+!spiderpet.spec
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+# Temporary/debug outputs
+*.log
+*.tmp
+*.bak
+*.zip
+# Environment / keys
+.env
+.env.*

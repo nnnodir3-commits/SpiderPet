@@ -1,0 +1,15 @@
+SpiderPet v38 — GitHub uchun tayyorlangan paket
+
+1. README_UZ.md — dasturning o‘zbekcha tavsifi va ishga tushirish yo‘riqnomasi.
+2. README.md — GitHub sahifasi uchun inglizcha asosiy tavsif.
+3. CONTRIBUTING.md — boshqa dasturchilar taklif kiritish tartibi.
+4. .github/workflows/tests.yml — kod push/PR bo‘lganda avtomatik testlar.
+5. docs/PUBLISHING_CHECKLIST.md — ommaga chiqarishdan oldin bajariladigan ishlar.
+6. docs/LICENSING.md — litsenziya va tasvirlar huquqlarini tekshirish.
+7. docs/MIT_LICENSE_DRAFT.txt — MIT litsenziyasining HALI FAOLLASHTIRILMAGAN namunasi.
+
+ESLATMA: Avval GitHub'da PRIVATE repozitoriyga joylang. Rasmlar/teksturalar huquqi
+va kod litsenziyasi tasdiqlanmaguncha PUBLIC qilmang.
+
+Bu paket original v38 manba kodi va rasmlarini saqlaydi. Tayyor Windows EXE mavjud emas.
+Windows'da BUILD_ONE_EXE.bat orqali yig‘iladi.
