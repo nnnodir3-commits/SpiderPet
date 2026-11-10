@@ -1,0 +1,14 @@
+SpiderPet GitHub бош саҳифасини янгилаш
+
+1. Ушбу ZIP архивни очинг.
+2. Ундан README.md, README_UZ.md ва docs/media/ папкасини олинг.
+3. GitHub Desktop орқали компьютерга клонланган SpiderPet папкасига айнан шу тартибда кўчиринг.
+   README.md ва README_UZ.md ни алмаштиришга рози бўлинг.
+   docs/media/ папкаси янги бўлади.
+   .git ни, spiderpet.pyw ни, PNG анимация кадрларини ўзгартирманг.
+4. GitHub Desktop -> Changes -> Summary: Improve README and add showcase images
+5. Commit to main -> Push origin.
+6. https://github.com/nnnodir3-commits/SpiderPet манзилини қайта очиб текширинг.
+
+Эслатма: Нақд Windows EXE аллақачон v38.0.0 релизида мавжуд.
+График тасвирларнинг лицензияга оид ҳолати ўзгармаган.

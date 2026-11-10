@@ -1,88 +1,79 @@
-# SpiderPet 🕷️
+<div align="center">
+  <img src="docs/media/spiderpet-hero.png" alt="Illustrated SpiderPet v38 desktop showcase" width="100%" />
 
-**A little jumping spider living on your Windows desktop.**
+  # SpiderPet 🕷️
+  **A lifelike jumping spider that explores your Windows desktop.**
 
-SpiderPet v38 is a small, photorealistic desktop pet implemented with Python,
-Tkinter and Pillow. The spider wanders around Windows, responds to cursor
-movement, explores application-window edges, builds a corner silk retreat,
-hangs from a trailing silk thread, and interacts with other spider instances.
+  [![Release](https://img.shields.io/github/v/release/nnnodir3-commits/SpiderPet?label=latest%20release)](https://github.com/nnnodir3-commits/SpiderPet/releases/latest)
+  ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows)
+  ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+  [![Code license](https://img.shields.io/badge/code%20license-MIT-16A085)](LICENSE)
 
-> **Complete source package:** This repository bundle includes the **full 44 PNG animation set**
-> required to run the graphical application. For upload instructions, see
-> [START_HERE_GITHUB_UZ.md](START_HERE_GITHUB_UZ.md).
->
-> **Licensing:** SpiderPet's **original code is MIT-licensed**. The 44 sprite PNGs
-> have **separate, currently unverified redistribution rights**. They are **not
-> MIT-licensed**. See [Image asset rights](ASSETS_LICENSE.md) and
-> [Licensing details](docs/LICENSING.md). The complete image-containing package
-> must not be publicly redistributed until the source rights are established.
+  **[⬇️ Download SpiderPet.exe](https://github.com/nnnodir3-commits/SpiderPet/releases/tag/v38.0.0)** · **[Ўзбекча](README_UZ.md)** · **[Report a bug](https://github.com/nnnodir3-commits/SpiderPet/issues/new/choose)**
+</div>
 
-## Features
+> **What's new?** The first public v38 release includes realistic walking, cursor reactions, corner silk retreats, hanging from a visible thread, natural idle behaviors and two-spider territorial encounters.
 
-- 32 photorealistic walking frames with direction-aware gait and jumps.
-- Natural behavior: idle foreleg probing, careful looking around, subtle rest
-  movements and startle/backstep reactions.
-- Corner silk retreats that can grow, be disturbed, or fade when abandoned.
-- A suspended spider that visibly descends and climbs **with its own silk**:
-  the spider body and strand share a single transparent overlay (the working
-  v36 fix).
-- Two spiders perform raised-foreleg threat displays, then potentially fight;
-  the loser retreats.
-- Window-edge movement and cursor responses.
-- No fly-hunting mode (the v37 experiment is not in v38).
+<div align="center">
+  <img src="docs/media/spiderpet-features.png" alt="Illustrations made with SpiderPet v38 sprite artwork: movement, silk hanging, threat displays" width="100%" />
+  <sub>Illustrative composites made with the actual v38 animation sprites; not captured Windows screenshots.</sub>
+</div>
 
-## Requirements
+## Get SpiderPet
 
-- Windows 10/11 with a graphical desktop (Win32 API and Tk transparency).
-- Python 3.10+ with Tkinter.
-- [Pillow](https://pypi.org/project/Pillow/), installed using `requirements.txt`.
-- For **running the graphic version**: 32 `walk_*.png` and 12 `threat_*.png`
-  frames in the same directory as `spiderpet.pyw`.
+**For most users — no Python required:**
 
-## Run on Windows
+1. Open **[SpiderPet v38.0.0 — Releases](https://github.com/nnnodir3-commits/SpiderPet/releases/tag/v38.0.0)**.
+2. Under **Assets**, download **`SpiderPet.exe`** (Windows 10/11).
+3. Run the file. The spider moves over your desktop without blocking mouse clicks.
+4. Press **`Ctrl + Shift + Q`** to close SpiderPet.
+
+> **Windows security note:** This community project may not have a commercial code-signing certificate. Windows SmartScreen may display a warning for an unfamiliar EXE. Only download from the official release page, and do not bypass security warnings unless you have verified and trust the file and publisher.
+
+## What it can do
+
+| Behavior | What you will see |
+| --- | --- |
+| 🕷️ Natural movement | Direction-aware walking, turns, jumps and lifelike gait |
+| 👀 Curiosity | Stops to look around and probes with its front legs |
+| 🖱️ Cursor response | Notices mouse movement, startles or takes a short backward step |
+| 🕸️ Silk retreat | Builds a corner shelter; webs can grow and respond to disturbance |
+| 🧵 Hanging | Descends and climbs on a visible silk strand — both sprite and silk move together |
+| ⚔️ Two-spider encounter | Raised-foreleg displays, territorial clashes and a retreating loser |
+| 🪟 Desktop interaction | Moves near application-window edges using a transparent click-through overlay |
+
+The earlier experimental fly-hunting scene **is not included** in v38.
+
+## For developers
+
+Clone the source and install requirements:
 
 ```powershell
+git clone https://github.com/nnnodir3-commits/SpiderPet.git
+cd SpiderPet
 py -3 -m pip install -r requirements.txt
 py -3 spiderpet.pyw
 ```
 
-Or double-click `START_PREVIEW.bat`. Exit via **Ctrl+Shift+Q**.
+To build a Windows executable locally, run `BUILD_ONE_EXE.bat`. A GitHub Actions workflow is also available under **Actions → Build Windows EXE**; build artifacts are separate from published Releases.
 
-`TEST_NATURAL_BEHAVIOR.bat`, `TEST_THREAT_DISPLAY.bat`, `TEST_HANGING.bat`
-and `START_TWO_SPIDERS.bat` launch focused demonstrations.
-
-**Note:** this source project is **not a pre-built `.exe`**. On Windows, run
-`BUILD_ONE_EXE.bat` to build a one-file executable with PyInstaller, then test
-it using `TEST_EXE.bat` before distributing it. GitHub Actions also provides a
-manual **Build Windows EXE** workflow, which produces a downloadable build
-artifact (not an automatically published Release).
-
-## Development
+Run tests:
 
 ```powershell
-py -3 -m pip install -r requirements.txt
 py -3 -m unittest discover -p "test_*.py" -v
 py -3 check_release_assets.py
 ```
 
-64 unit tests passed in a non-Windows test environment during release
-preparation. Those checks are not a substitute for real Windows GUI testing.
-The original v38 graphics, body-and-silk hanging, and duel systems are
-unchanged in this documentation/licensing release.
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md), and [SECURITY.md](SECURITY.md). Suggestions, bug reports and pull requests are welcome.
 
-## Contributing
+## Licensing and image assets
 
-Issues, ideas and code improvements are welcome. Please read
-[CONTRIBUTING.md](CONTRIBUTING.md) before submitting a Pull Request. Do not
-commit copyrighted third-party resources without documented permissions.
+**Original project code and documentation:** [MIT License](LICENSE).
 
-## Rights and release status
+**Spider PNGs (`walk_*.png`, `threat_*.png`):** *not covered by the code MIT license*. The upstream redistribution terms for the source model and textures have not been independently confirmed. See [ASSETS_LICENSE.md](ASSETS_LICENSE.md) and [asset provenance](docs/ASSET_PROVENANCE.md). Public availability of these files is not itself permission to republish them elsewhere. Contributors should not add unlicensed third-party media.
 
-- [MIT License — source code](LICENSE)
-- [PNG animation image rights](ASSETS_LICENSE.md)
-- [Image source/permission register](docs/ASSET_PROVENANCE.md)
-- [Public release checklist](docs/PUBLISHING_CHECKLIST.md)
-- [Uzbek-language README](README_UZ.md)
+## Credits
 
-**Maintainer account:** [nnnodir3-commits](https://github.com/nnnodir3-commits).
-This repository is designed for transparent, community-led development.
+Developed and maintained through [nnnodir3-commits](https://github.com/nnnodir3-commits/SpiderPet).
+
+<div align="center"><sub>SpiderPet v38 · Made for curious Windows desktops</sub></div>
